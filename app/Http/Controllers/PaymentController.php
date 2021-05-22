@@ -18,7 +18,7 @@ class PaymentController extends Controller
         try{
             return Paystack::getAuthorizationUrl()->redirectNow();
         }catch(\Exception $e) {
-            return redirect('/entries')->with(['success'=> 'Payment successful. Summary of your order has been received and a copy has been sent to your Mail']);
+            return redirect('/entries')->with(['success'=> $e->getMessage()]);
         }        
     }
 
