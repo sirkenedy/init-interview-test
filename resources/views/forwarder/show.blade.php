@@ -101,11 +101,7 @@
                     </tbody>
                 </table>
                 </div>
-            @else
-                <h2>No orders available for this entry</h2>
-            @endif
-
-            <div class="row">
+                <div class="row">
                 <div class="col-md-12 ">
                     <form action="{{ route('entry.checkout_order') }}" method="post">
                         @csrf
@@ -114,6 +110,11 @@
                     </form>
                 </div>
             </div>
+            @else
+                <h2>No orders available for this entry</h2>
+            @endif
+
+            
         </div>
     </main>
 @endsection
