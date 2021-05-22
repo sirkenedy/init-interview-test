@@ -51,7 +51,7 @@
           </div> -->
         </div>
         
-        <input type="hidden" class="form-control" name="amount" value="{{$entry->orders->sum('total_cost') }}">
+        <input type="hidden" class="form-control" name="amount" value="{{$entry->orders->sum('total_cost') * 100 }}">
         <input type="hidden" name="quantity" value="1">
         <input type="hidden" name="orderID" value="{{$entry->id}}">
         <input type="hidden" name="_token" value="{{ csrf_token() }}">

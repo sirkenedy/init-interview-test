@@ -2,7 +2,7 @@
 @section('content')
 <main class="container mt-4">
   <div class="bg-light p-5 rounded">
-  <form class="form-horizontal" method="Post" action="{{url('guest-info')}}">
+  <form class="form-horizontal" method="Post" action="{{url('/guest-info')}}">
   <!-- {{csrf_field()}} -->
   @csrf
     <fieldset>

@@ -31,6 +31,6 @@ class SendUserNotification implements ShouldQueue
      */
     public function handle(EntryProcessed $event)
     {
-        \Mail::to("owoputikehinde@gmail.com")->send(new OrderStatusForUser($event->entry));
+        \Mail::to($event->entry->user->email)->send(new OrderStatusForUser($event->entry));
     }
 }
