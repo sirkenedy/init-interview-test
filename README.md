@@ -1,77 +1,76 @@
-<p align="center"><img src="https://res.cloudinary.com/dtfbvvkyp/image/upload/v1566331377/laravel-logolockup-cmyk-red.svg" width="400"></p>
-
 <p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/d/total.svg" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
+<a href="https://superfreight-app.herokuapp.com">Click to see app demo</a>
+
 </p>
 
-## About Laravel
+## About App
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+At INITS, we execute a lot of mission-critical projects and we are driven by a vision to enable businesses and agencies to meet their goals and objectives - creating value through solutions we deploy. Our capable team makes this possible and we need to expand and bring in amazing people to do even more. And we would like you to join us.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+There are four stages involved. On average, this process takes 7-14 days.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+1. Indicate Interest - You've done this already
+2. Submit Assessment Project - Details below
+3. Interview
+4. Engagement
 
-## Learning Laravel
+Once completed successfully, we schedule the onboarding and introduce you to your new team members.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+To help us assess your level of skill and experience more effectively, we would like you to create a test project. This test project will help us better understand how you think, process requirements, and implement features. As a Mid-Level Developer, this task can be completed in less than a day.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
 
-## Laravel Sponsors
+Your client, SuperFreighters,  runs a freight-forwarding business, helping people move items like cars and equipment from the US and UK to Nigeria by air and by sea.
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[British Software Development](https://www.britishsoftware.co)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- [UserInsights](https://userinsights.com)
-- [Fragrantica](https://www.fragrantica.com)
-- [SOFTonSOFA](https://softonsofa.com/)
-- [User10](https://user10.com)
-- [Soumettre.fr](https://soumettre.fr/)
-- [CodeBrisk](https://codebrisk.com)
-- [1Forge](https://1forge.com)
-- [TECPRESSO](https://tecpresso.co.jp/)
-- [Runtime Converter](http://runtimeconverter.com/)
-- [WebL'Agence](https://weblagence.com/)
-- [Invoice Ninja](https://www.invoiceninja.com)
-- [iMi digital](https://www.imi-digital.de/)
-- [Earthlink](https://www.earthlink.ro/)
-- [Steadfast Collective](https://steadfastcollective.com/)
-- [We Are The Robots Inc.](https://watr.mx/)
-- [Understand.io](https://www.understand.io/)
-- [Abdel Elrafa](https://abdelelrafa.com)
-- [Hyper Host](https://hyper.host)
-- [Appoly](https://www.appoly.co.uk)
-- [OP.GG](https://op.gg)
+Three things affect the cost of the service
 
-## Contributing
+- Mode of Transport
+- Weight of Item
+- Country of Origin
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+For the sake of simplicity, let's set some values.
 
-## Code of Conduct
+Every mode of transport has a base fare.
+Base Fare by Air - 50,000 Naira
+Base Fare by Sea - 15,000 Naira
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+By Air, everything arrives in Nigeria two days after shipment :). Transportation by Sea however, takes 10 times longer than by Air.
+
+Weight of the item affects cost. Per Kilogram
+By Air  - NGN 10,000
+By Sea  - NGN 2,000
+All packages are rounded up to kilograms.
+
+Country of Origin
+There's Flat Rate in each country for All Outgoing Packages
+US - NGN 1,500
+UK - NGN 800
+
+Lastly, see if you can apply a 10% customs tax on the shipping cost as well.
+
+Create an ordering system anyone can access for placing an order to ship a described item.
+
+Based on the information they enter, calculate and display the amount their shipment will cost and allow payment for that order using Paystack or other real payment gateway. Use in test mode, no live payments.
+
+However, an email should be sent to an admin and the customer about the order. No need to create a signup or login for customers in this test. That is all. We strongly recommend that you use the Laravel Framework.
+
+What is important is how you approach doing this, much more than how it looks.  Use a free bootstrap-based theme.
+
+Create a  private repository on bitbucket/GitHub and provide all your files (and SQL dump of the database with sample data) there so we can run and test. If you can host it somewhere and share the url, even better.
+
+This task can be completed in less than a day. This timeline is based on the role you have applied for and the level of experience you indicated on your profile. However, to ensure you have enough time, you have 72 hours to turn in your submission by email.
+
+
+
+## Thought process
+...coming soon
+
+## Init Interview test by
+- [Sirkenedy](https://github.com/sirkenedy)
 
 ## Security Vulnerabilities
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+If you discover a security vulnerability within this test(app), please send an e-mail to Owoputi Kehinde via [owoputikehinde@gmail.com]
 
 ## License
 
