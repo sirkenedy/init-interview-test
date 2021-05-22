@@ -65,6 +65,8 @@
             </div>
             </div>
             @if(count($entry->orders) > 0)
+            <div class="table-responsive-sm">
+
                 <table class="table table-striped">
                     <thead>
                         <tr>
@@ -98,6 +100,7 @@
 
                     </tbody>
                 </table>
+                </div>
             @else
                 <h2>No orders available for this entry</h2>
             @endif
