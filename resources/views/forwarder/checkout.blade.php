@@ -55,6 +55,7 @@
         <input type="hidden" name="quantity" value="1">
         <input type="hidden" name="orderID" value="{{$entry->id}}">
         <input type="hidden" name="_token" value="{{ csrf_token() }}">
+        <input type="hidden" name="reference" value="{{ Paystack::genTranxRef() }}">
         <input type="hidden" name="metadata" value="{{ json_encode($array = ['name' => $entry->user->name,'entry_id' => $entry->id]) }}" >
 
         <div class="mb-3">
