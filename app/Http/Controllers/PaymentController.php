@@ -42,7 +42,7 @@ class PaymentController extends Controller
         event(new EntryProcessed($entry));
         
         DB::commit();
-        return $entry;
+        // return $entry;
         return redirect('/entries/'.$entry->id)->with(['success'=> 'Payment successful. Summary of your order has been receive and a copy has been sent to your Mail']);
     }
 }

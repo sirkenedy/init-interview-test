@@ -25,9 +25,9 @@ class OrderStoreRequest extends FormRequest
     {
         return [
             'name' => 'required',
-            'weight'=> 'required',
-            'transport' => 'required',
-            'country' => 'required',
+            'weight'=> 'required|int',
+            'transport' => 'required|starts_with:sea,air',
+            'country' => 'required|starts_with:uk,usa',
         ];
     }
 
