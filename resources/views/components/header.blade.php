@@ -67,8 +67,8 @@
   @endforeach
 @endif
 
-@if({{$success}})
-<div class="alert alert-success">{{ $sucess }}</div>
+@if($success)
+<div class="alert alert-success">{{ $success }} </div>
 @endif
 </div>
 
