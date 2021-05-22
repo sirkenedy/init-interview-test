@@ -3,6 +3,8 @@
 namespace App\Http\Requests\Order;
 
 use Illuminate\Foundation\Http\FormRequest;
+use App\Rules\Validcountry;
+use App\Rules\Validtransport;
 
 class OrderStoreRequest extends FormRequest
 {
@@ -26,8 +28,8 @@ class OrderStoreRequest extends FormRequest
         return [
             'name' => 'required',
             'weight'=> 'required|int',
-            'transport' => 'required|starts_with:sea,air',
-            'country' => 'required|starts_with:uk,usa',
+            'transport' => ['required',new Validtransport],
+            'country' => ['required',new Validcountry],
         ];
     }
 
