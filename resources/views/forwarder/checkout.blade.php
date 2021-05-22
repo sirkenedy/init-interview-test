@@ -39,7 +39,7 @@
     <div class="col-md-6 order-md-1">
       <h4 class="mb-3">User Information</h4>
       <form method="post" action="{{ route('pay') }}" accept-charset="UTF-8">
-      @csrf
+      
         <div class="row">
           <div class="col-md-6 mb-3">
             <label for="firstName">First name</label>
@@ -55,6 +55,7 @@
         <input type="hidden" name="quantity" value="1">
         <input type="hidden" name="orderID" value="{{$entry->id}}">
         <input type="hidden" name="_token" value="{{ csrf_token() }}">
+        <input type="hidden" name="reference" value="{{ Paystack::genTranxRef() }}">
         <input type="hidden" name="metadata" value="{{ json_encode($array = ['name' => $entry->user->name,'entry_id' => $entry->id]) }}" >
 
         <div class="mb-3">
