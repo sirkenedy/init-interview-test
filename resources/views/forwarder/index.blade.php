@@ -47,7 +47,7 @@
           </table>
           </div>
       @else
-          <h2>No orders available for this entry</h2>
+          <h2>No entry available. click on the button above to create one &#128542;</h2>
       @endif
     </div>
   </main>

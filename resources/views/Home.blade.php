@@ -19,6 +19,22 @@
     </div>
     </div>
 
+    <div class="form-group">
+    <label class="col-md-4 control-label" for="name">LOCATION</label>  
+    <div class="col-md-4">
+    <input id="name" name="location" placeholder="address" class="form-control input-md" required="" type="text">
+        
+    </div>
+    </div>
+
+    <div class="form-group">
+    <label class="col-md-4 control-label" for="name">PHONE NUMBER</label>  
+    <div class="col-md-4">
+    <input id="name" name="phone_number" placeholder="phone number" class="form-control input-md" required="" type="text">
+        
+    </div>
+    </div>
+
     <!-- Text input-->
     <div class="form-group">
     <label class="col-md-4 control-label" for="email">Email</label>  

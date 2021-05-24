@@ -47,8 +47,8 @@ class PaymentController extends Controller
             // return $entry;
             return redirect('/entries')->with(['success'=> 'Payment successful. Summary of your order has been received and a copy has been sent to your Mail']);
         }catch(\Exception $e) {
-            
-            return redirect('/entries')->with(['success'=> $e->getMessage()]);
+            DB::rollBack();
+            return redirect('/entries')->with(['error'=> $e->getMessage()]);
         }  
     }
 }

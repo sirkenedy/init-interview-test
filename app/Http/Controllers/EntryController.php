@@ -56,8 +56,12 @@ class EntryController extends Controller
     {
           $entry = Entry::where('id', $entry)->with(['orders' => function ($q)  {
             $q->orderBy('created_at', 'desc');
-        }])->first();
-        return view('forwarder.show', compact('entry'));
+        }])->firstOrFail();
+
+        if ($entry->status == 0) {
+            return view('forwarder.show', compact('entry'));
+        }
+        return redirect('/entries')->with(['error'=> "Order has been paid for"]);
     }
 
     public function addOrder(OrderStoreRequest $request, $entry_id)
